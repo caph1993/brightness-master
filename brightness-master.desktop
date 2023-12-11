@@ -1,0 +1,18 @@
+[Desktop Entry]
+Categories=Development;
+Comment[en_US]=Adjust your screen physical and virtual brightness
+Comment=Adjust your screen physical and virtual brightness
+Exec=/home/carlos/apps/brightness-master/launcher.sh
+GenericName[en_US]=Brightness master
+GenericName=Brightness master
+Icon=/home/carlos/apps/brightness-master/tray-icon.png
+MimeType=
+Name[en_US]=Brightness master
+Name=Brightness master
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

@@ -8,16 +8,14 @@ let tray;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 400,
-    height: 200,
+    width: 450,
+    height: 300,
     frame: false,
     transparent: true,
     webPreferences: {
       nodeIntegration: true,
       preload: path.join(__dirname, 'preload.js'),
     },
-    // show: false, // Set show to false to prevent the taskbar icon
-    // skipTaskbar: true, // Set to true to prevent the taskbar icon
     icon: path.join(__dirname, 'tray-icon.png'),
   });
 

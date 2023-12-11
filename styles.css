@@ -1,7 +1,6 @@
 body {
   margin: 0;
   overflow: hidden;
-  font-family: 'Courier New', Courier, monospace;
   /* font-family: Arial, Helvetica, sans-serif; */
   /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
   /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
@@ -28,13 +27,18 @@ input[type="range"] {
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 4px;
-  margin: 8px;
+  margin: 4px;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.2); /* Add a box shadow when focused */
   transition: box-shadow 0.3s ease;
+  width: 100%;
 }
-.block__parent:focus {
+.block__parent:focus, .block__parent:hover {
   outline: none; /* Remove default focus outline */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Add a box shadow when focused */
+}
+.block__parent:not(:focus) {
+  zoom: 0.85;
+  width: 85%;
 }
 
 .block__increase, .block__decrease {
@@ -55,6 +59,10 @@ input[type="range"] {
 div:has(>.block__label){
   min-height: 30px;
 }
+.block__label{
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .bold-animation {
   animation: boldAnimation 0.25s ease;
 }
@@ -62,7 +70,6 @@ div:has(>.block__label){
   font-weight: bold;
   font-size: 1.3em;
 }
-
 @keyframes boldAnimation {
   0% {
     font-weight: bold;
@@ -74,53 +81,13 @@ div:has(>.block__label){
   }
 }
 
-
-
-.arrow-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100px; /* Adjust the width based on your design */
-  margin: 20px;
+.block__description {
+  font-size: 0.8em;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.arrow {
-  width: 40px;
-  height: 40px;
-  background-color: #3498db; /* Blue color, adjust as needed */
-  position: relative;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
 
-.arrow:before,
-.arrow:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 20px;
-  height: 2px;
-  background-color: #fff; /* White color, adjust as needed */
-  transition: background-color 0.2s ease;
-}
 
-.arrow:before {
-  left: 5px;
-  transform: rotate(-45deg);
-}
-
-.arrow:after {
-  left: 15px;
-  transform: rotate(45deg);
-}
-
-.arrow:hover {
-  transform: scale(1.1); /* Scale up when hovered */
-}
-
-.arrow:hover:before,
-.arrow:hover:after {
-  background-color: #ffcc00; /* Yellow color on hover, adjust as needed */
-}
 
 
 .text-center {

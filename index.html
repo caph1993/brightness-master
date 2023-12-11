@@ -13,20 +13,26 @@
 
 <body>
   <div id="container" class="vbox full-width full-height">
-    <div id="ctl" class="block__parent vbox" tabindex="0">
-      <div class="hbox align-items-center"><span class="block__label">...</span></div>
-      <div class="hbox align-items-center">
-        <button class="block__decrease">-</button>
+    <div class="hbox">
+      <div id="ctl" class="block__parent vbox" tabindex="0">
+        <div class="hbox align-items-center"><span class="block__label">...</span></div>
+        <div class="hbox align-items-center">
+          <button class="block__decrease">-</button>
           <input class="block__slider" type="range" min="0" max="100" value="50">
-        <button class="block__increase">+</button>
+          <button class="block__increase">+</button>
+        </div>
+        <div class="hbox align-items-center"><span class="block__description">Physical brightness</span></div>
       </div>
     </div>
-    <div id="xsf" class="block__parent vbox" tabindex="0">
-      <div class="hbox align-items-center"><span class="block__label">...</span></div>
-      <div class="hbox align-items-center">
-        <button class="block__decrease">-</button>
-        <input class="block__slider" type="range" min="0" max="100" value="50">
-        <button class="block__increase">+</button>
+    <div class="hbox">
+      <div id="xsf" class="block__parent vbox" tabindex="0">
+        <div class="hbox align-items-center"><span class="block__label">...</span></div>
+        <div class="hbox align-items-center">
+          <button class="block__decrease">-</button>
+          <input class="block__slider" type="range" min="0" max="100" value="50">
+          <button class="block__increase">+</button>
+        </div>
+        <div class="hbox align-items-center"><span class="block__description">Virtual brightness</span></div>
       </div>
     </div>
   </div>

@@ -1,0 +1,269 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+  font-size: 20px;
+}
+
+#container {
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 1em;
+  padding: 1em 2em;
+  box-sizing: border-box;
+}
+
+input[type="range"] {
+  width: 80%;
+  background: #f0f0f0; /* Slider track color */
+  border-radius: 10px; /* Rounded edges */
+  outline: none;
+  margin: 0;
+}
+
+.block__parent {
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 4px;
+  margin: 8px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2); /* Add a box shadow when focused */
+  transition: box-shadow 0.3s ease;
+}
+.block__parent:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Add a box shadow when focused */
+}
+
+.block__increase, .block__decrease {
+  width: 25px;
+  height: 25px;
+  background-color: #808080;
+  /* Gray background color */
+  border: none;
+  border-radius: 50%;
+  /* Rounded shape */
+  color: #fff;
+  /* Text color */
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+div:has(>.block__label){
+  min-height: 30px;
+}
+.bold-animation {
+  animation: boldAnimation 0.25s ease;
+}
+.bold-animation-hold {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+@keyframes boldAnimation {
+  0% {
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+  100% {
+    font-size: 1.0em;
+    font-weight: normal;
+  }
+}
+
+
+
+.arrow-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100px; /* Adjust the width based on your design */
+  margin: 20px;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  background-color: #3498db; /* Blue color, adjust as needed */
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.arrow:before,
+.arrow:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 2px;
+  background-color: #fff; /* White color, adjust as needed */
+  transition: background-color 0.2s ease;
+}
+
+.arrow:before {
+  left: 5px;
+  transform: rotate(-45deg);
+}
+
+.arrow:after {
+  left: 15px;
+  transform: rotate(45deg);
+}
+
+.arrow:hover {
+  transform: scale(1.1); /* Scale up when hovered */
+}
+
+.arrow:hover:before,
+.arrow:hover:after {
+  background-color: #ffcc00; /* Yellow color on hover, adjust as needed */
+}
+
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.block-head.no-bold {
+  font-weight: inherit;
+}
+
+.flex {
+  display: flex;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.hbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.vbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.hbox-compact {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-grow {
+  flex: 1
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-start {
+  justify-content: start;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: end;
+}
+
+.align-items-stretch {
+  align-items: stretch;
+}
+
+.height-auto {
+  height: auto;
+}
+
+.strike-through {
+  text-decoration: line-through;
+}
+
+.reveal pre {
+  width: unset;
+  margin: unset;
+}
+
+.reveal pre code {
+  width: unset;
+  max-height: unset;
+}
+
+.cite-bottom-elem.highlighted {
+  text-decoration: underline;
+}
+
+.cite-bottom-elem:hover {
+  text-decoration: underline;
+}
+
+.cite-bottom-elem {
+  font-size: 0.7em;
+  cursor: pointer;
+}
+
+.font-s {
+  font-size: 0.8em;
+}
+
+.padding-0-m {
+  padding: 0 1em;
+}
+
+.padding-s-m {
+  padding: 0.1em 1em;
+}
+
+.round-border {
+  border: 1px solid black;
+  border-radius: 0.2em;
+  padding: 0 0.3em;
+  margin: 0 0.3em;
+}
+
+.round-border-title {
+  color: var(--r-heading-color);
+}
